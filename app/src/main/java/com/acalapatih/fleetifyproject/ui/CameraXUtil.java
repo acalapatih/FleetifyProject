@@ -1,17 +1,14 @@
 package com.acalapatih.fleetifyproject.ui;
 
-import android.content.ContentResolver;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
-import android.net.Uri;
 import android.os.Environment;
+
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
-import java.io.InputStream;
-import java.io.OutputStream;
 import java.text.SimpleDateFormat;
 import java.util.Locale;
 
@@ -49,27 +46,6 @@ public class CameraXUtil {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-
-    public static File uriToFile(Uri selectedImg, Context context) {
-        ContentResolver contentResolver = context.getContentResolver();
-        File myFile = createCustomTempFile(context);
-
-        try {
-            InputStream inputStream = contentResolver.openInputStream(selectedImg);
-            OutputStream outputStream = new FileOutputStream(myFile);
-            byte[] buf = new byte[1024];
-            int len;
-            while ((len = inputStream.read(buf)) > 0) {
-                outputStream.write(buf, 0, len);
-            }
-            outputStream.close();
-            inputStream.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        return myFile;
     }
 
     public static File reduceFileImage(File file) {

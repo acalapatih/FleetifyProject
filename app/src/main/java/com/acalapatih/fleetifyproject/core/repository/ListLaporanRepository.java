@@ -69,7 +69,8 @@ public class ListLaporanRepository {
 
                     if (listVehicle != null && !listVehicle.isEmpty()) {
                         Log.d("API Response", "Data received: " + new Gson().toJson(listVehicle));
-                        listVehicleLiveData.postValue(listVehicle);;
+                        listVehicleLiveData.postValue(listVehicle);
+                        ;
                     } else {
                         Log.d("API Response", "Vechicle list is empty");
                         listVehicleLiveData.postValue(null);
@@ -87,6 +88,7 @@ public class ListLaporanRepository {
 
     public interface DataCallback<T> {
         void onSuccess(T data);
+
         void onError(Exception e);
     }
 }

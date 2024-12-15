@@ -2,7 +2,7 @@ package com.acalapatih.fleetifyproject.core.data.response;
 
 import com.google.gson.annotations.SerializedName;
 
-public class PostLaporanResponse{
+public class PostLaporanResponse {
 
 	@SerializedName("message")
 	private String message;
@@ -10,11 +10,11 @@ public class PostLaporanResponse{
 	@SerializedName("status")
 	private boolean status;
 
-	public String getMessage(){
+	public String getMessage() {
 		return message;
 	}
 
-	public boolean isStatus(){
+	public boolean isStatus() {
 		return status;
 	}
 }

@@ -42,7 +42,6 @@ public class PostLaporanRepository {
 
             @Override
             public void onFailure(Call<PostLaporanResponse> call, Throwable t) {
-                // Handle error jika request gagal
                 postLaporanResponseLiveData.setValue(null);
             }
         });

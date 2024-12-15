@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.Manifest;
+
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
@@ -24,6 +25,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import java.text.SimpleDateFormat;
 
 import android.widget.ArrayAdapter;
@@ -64,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        if (allPermissionGranted()){
+        if (allPermissionGranted()) {
             ActivityCompat.requestPermissions(
                     this,
                     REQUIRED_PERMISSION,
@@ -86,9 +88,7 @@ public class MainActivity extends AppCompatActivity {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == REQUEST_CODE_PERMISSION) {
             if (allPermissionGranted()) {
-                Toast.makeText(this, "Semua izin diberikan.", Toast.LENGTH_SHORT).show();
-            } else {
-                Toast.makeText(this, "Izin tidak diberikan!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Izin tidak diberikan", Toast.LENGTH_SHORT).show();
             }
         }
     }
@@ -96,10 +96,10 @@ public class MainActivity extends AppCompatActivity {
     private boolean allPermissionGranted() {
         for (String permission : REQUIRED_PERMISSION) {
             if (ContextCompat.checkSelfPermission(this, permission) != PackageManager.PERMISSION_GRANTED) {
-                return false;
+                return true;
             }
         }
-        return true;
+        return false;
     }
 
     protected void initView() {
@@ -115,8 +115,8 @@ public class MainActivity extends AppCompatActivity {
             public void onChanged(List<GetListLaporanResponseItem> getListLaporanResponseItems) {
                 Log.d("MainActivity", "Data received: " + (getListLaporanResponseItems != null ? getListLaporanResponseItems.size() : "null"));
                 if (getListLaporanResponseItems != null) {
-                        listLaporanAdapter.setListLaporan(getListLaporanResponseItems);
-                        listLaporanAdapter.notifyDataSetChanged();
+                    listLaporanAdapter.setListLaporan(getListLaporanResponseItems);
+                    listLaporanAdapter.notifyDataSetChanged();
                 } else {
                     Toast.makeText(MainActivity.this, "Gagal Memuat Data", Toast.LENGTH_SHORT).show();
                 }

@@ -2,26 +2,26 @@ package com.acalapatih.fleetifyproject.core.data.response;
 
 import com.google.gson.annotations.SerializedName;
 
-public class GetListVehicleResponseItem{
+public class GetListVehicleResponseItem {
 
-	@SerializedName("licenseNumber")
-	private String licenseNumber;
+    @SerializedName("licenseNumber")
+    private String licenseNumber;
 
-	@SerializedName("vehicleId")
-	private String vehicleId;
+    @SerializedName("vehicleId")
+    private String vehicleId;
 
-	@SerializedName("type")
-	private String type;
+    @SerializedName("type")
+    private String type;
 
-	public String getLicenseNumber(){
-		return licenseNumber;
-	}
+    public String getLicenseNumber() {
+        return licenseNumber;
+    }
 
-	public String getVehicleId(){
-		return vehicleId;
-	}
+    public String getVehicleId() {
+        return vehicleId;
+    }
 
-	public String getType(){
-		return type;
-	}
+    public String getType() {
+        return type;
+    }
 }
