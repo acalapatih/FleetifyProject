@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cv_laporan"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:layout_marginHorizontal="10dp"
+    app:cardBackgroundColor="@android:color/transparent"
+    app:cardElevation="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_radius_20_whiteback">
+
+        <ImageView
+            android:id="@+id/iv_warning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/circle_backgroud"
+            android:contentDescription="@string/desc_iv_warning"
+            android:padding="5dp"
+            android:src="@drawable/ic_warning"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_label_laporan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_label_laporan"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="10dp"
+            app:layout_constraintEnd_toStartOf="@id/tv_waktu_laporan"
+            app:layout_constraintStart_toEndOf="@id/iv_warning"
+            app:layout_constraintTop_toTopOf="@id/iv_warning" />
+
+        <TextView
+            android:id="@+id/tv_report_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_report_id"
+            android:textSize="14sp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toStartOf="@id/tv_waktu_laporan"
+            app:layout_constraintTop_toBottomOf="@id/tv_label_laporan"
+            app:layout_constraintStart_toStartOf="@id/tv_label_laporan" />
+
+        <TextView
+            android:id="@+id/tv_waktu_laporan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:text="@string/tv_waktu_laporan"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_status_laporan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border_radius5_greyback"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="5dp"
+            android:text="@string/tv_status_laporan"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/tv_waktu_laporan"
+            app:layout_constraintTop_toBottomOf="@id/tv_waktu_laporan" />
+
+        <View
+            android:id="@+id/thin_line"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="20dp"
+            android:background="#D3D3D3"
+            app:layout_constraintTop_toBottomOf="@id/tv_report_id" />
+
+        <ImageView
+            android:id="@+id/iv_vehicle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/desc_iv_vehicle"
+            android:src="@drawable/ic_vehicle"
+            app:layout_constraintStart_toStartOf="@id/iv_warning"
+            app:layout_constraintTop_toBottomOf="@id/thin_line" />
+
+        <TextView
+            android:id="@+id/tv_vehicle_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/tv_vehicle_name"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/iv_vehicle"
+            app:layout_constraintStart_toEndOf="@id/iv_vehicle"
+            app:layout_constraintTop_toTopOf="@id/iv_vehicle" />
+
+        <TextView
+            android:id="@+id/tv_nomor_polisi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border_radius5_whiteback"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="5dp"
+            android:text="@string/tv_nomor_polisi"
+            android:textColor="#808080"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/tv_waktu_laporan"
+            app:layout_constraintTop_toTopOf="@id/iv_vehicle" />
+
+        <ImageView
+            android:id="@+id/iv_report"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/desc_iv_report_by"
+            android:src="@drawable/ic_person"
+            app:layout_constraintStart_toStartOf="@id/iv_vehicle"
+            app:layout_constraintTop_toBottomOf="@id/iv_vehicle" />
+
+        <TextView
+            android:id="@+id/tv_report_by"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/tv_report"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/iv_report"
+            app:layout_constraintStart_toEndOf="@id/iv_report"
+            app:layout_constraintTop_toTopOf="@id/iv_report" />
+
+        <View
+            android:id="@+id/thin_line2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="20dp"
+            android:background="#D3D3D3"
+            app:layout_constraintTop_toBottomOf="@id/iv_report" />
+
+        <ImageView
+            android:id="@+id/iv_catatan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/desc_iv_catatan"
+            android:src="@drawable/ic_catatan"
+            app:layout_constraintStart_toStartOf="@id/iv_warning"
+            app:layout_constraintTop_toBottomOf="@id/thin_line2" />
+
+        <TextView
+            android:id="@+id/tv_catatan_keluhan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/tv_catatan_keluhan"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/iv_catatan"
+            app:layout_constraintStart_toEndOf="@id/iv_catatan"
+            app:layout_constraintTop_toTopOf="@id/iv_catatan" />
+
+        <TextView
+            android:id="@+id/tv_keluhan"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="@string/tv_keluhan"
+            app:layout_constraintStart_toStartOf="@id/tv_catatan_keluhan"
+            app:layout_constraintTop_toBottomOf="@id/tv_catatan_keluhan" />
+
+        <ImageView
+            android:id="@+id/iv_keluhan"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/border_radius5_lightgreyback"
+            android:padding="10dp"
+            android:src="@drawable/ic_image"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/iv_catatan" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

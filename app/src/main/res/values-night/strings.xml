@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tv_label">Laporan Keluhan Kendaraan</string>
+    <string name="tv_fullname">Amir Acalapati Henry</string>
+    <string name="tv_label_laporan">Laporan Keluhan</string>
+    <string name="tv_report_id">reportid</string>
+    <string name="tv_waktu_laporan">Senin, 1 Jan - 12 : 30</string>
+    <string name="desc_iv_vehicle">Vehicle Name</string>
+    <string name="tv_vehicle_name">vehicleName</string>
+    <string name="desc_iv_report_by">reportBy</string>
+    <string name="tv_report">reportBy</string>
+    <string name="tv_status_laporan">status</string>
+    <string name="tv_nomor_polisi">B-XXXX-AC</string>
+    <string name="desc_iv_catatan">Catatan Keluhan</string>
+    <string name="tv_catatan_keluhan">Catatan Keluhan :</string>
+    <string name="tv_keluhan">Lorem ipsum dolor sit amet, constectetur adipiscing...</string>
+    <string name="btn_buat_laporan">Buat Laporan Keluhan Baru</string>
+    <string name="tv_label_form_laporan">Form Laporan Keluhan</string>
+    <string name="btn_tanggal_laporan">Senin, 1 Jan - 12:30</string>
+    <string name="ti_dropdown_pilih_kendaraan">Pilih Kendaraan</string>
+    <string name="ti_text_catatan_keluhan">Catatan Keluhan</string>
+    <string name="tv_label_dokumen_laporan">Dokumen Laporan</string>
+    <string name="btn_ambil_foto">Ambil Foto</string>
+    <string name="desc_ic_close">Close</string>
+    <string name="btn_kirim_laporan">Kirim Laporan</string>
+    <string name="et_search">Cari Nama Kendaraan</string>
+</resources>
